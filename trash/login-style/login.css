@@ -1,0 +1,103 @@
+@import "../../../resources/fonts/stylesheet.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-image: url(../../../resources/images/backgrounds/login-register.png);
+  background-position: center;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section > div {
+  display: flex;
+  flex-direction: column;
+  min-width: 40vmin;
+  max-width: 40vmin;
+  min-height: 60vmin;
+  max-height: 65vmin;
+  background-color: rgba(201, 201, 201, 0.38);
+}
+section div.checkbox {
+  display: flex;
+  align-items: center;
+}
+section h1, section label, section p, section a {
+  color: #FFFFFF;
+  font-family: "Kross Neue Grotesk Book";
+}
+section h1 {
+  font-family: "Kross Neue Grotesk Heavy";
+  font-size: 3.5vmin;
+}
+section label {
+  font-size: 1.5vmin;
+}
+section a {
+  text-decoration: underline;
+}
+section p {
+  font-size: 1.3vmin;
+  margin: 0 auto;
+}
+section button {
+  background-color: #E1B0C2;
+  color: #000000;
+  border: none;
+  margin: 1vh auto;
+  width: 100%;
+  padding-block: 2vmin;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Kross Neue Grotesk Heavy";
+  font-size: 1.5vmin;
+}
+section button:hover {
+  background-color: #F0A8A8;
+}
+section form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  min-width: 40vmin;
+  max-width: 45vmin;
+}
+section div form div label {
+  margin-left: 1vmin;
+}
+section input[type=checkbox] {
+  padding: 0;
+  margin: 0;
+  height: 2vmin;
+}
+section div form input[type=password], section div form input[type=email] {
+  padding: 1vmin 1.5vmin;
+  font-size: 1.5vmin;
+  width: 100%;
+  border-radius: 1vmin;
+  border: none;
+  margin: 0.5vmin 0 3vmin 0;
+}
+section div form input[type=password]:focus, section div form input[type=email]:focus {
+  outline: none;
+  background-color: rgb(163, 163, 163);
+  color: white;
+}
+section h1 {
+  margin: 0 0 10vh 0;
+}/*# sourceMappingURL=login.css.map */

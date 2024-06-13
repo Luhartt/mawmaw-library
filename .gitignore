@@ -1,0 +1,5 @@
+#ignore five server config
+/fiveserver.config.js
+
+#ignore auto-generated php_tmp files from five server
+/.php_tmp

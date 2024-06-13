@@ -1,0 +1,105 @@
+@import "../../../assets/scss/reset.scss";
+@import "../../../resources/fonts/stylesheet.css";
+
+
+body{
+    background-image: url(../../../resources/images/backgrounds/login-register.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section{
+    >div{
+        display: flex;
+        flex-direction: column;
+        min-width: 40vmin;
+        max-width: 40vmin;
+        min-height: 60vmin;
+        max-height: 65vmin;
+        background-color: rgba(201, 201, 201, 0.38);
+    }
+
+    div.checkbox{
+        display: flex;
+        align-items: center;
+    }
+    h1, label, p, a{
+        color: $text-color;
+        font-family: 'Kross Neue Grotesk Book';
+    }
+    h1{
+        font-family: 'Kross Neue Grotesk Heavy';
+        font-size: 3.5vmin;
+    }   
+    label{
+        font-size: 1.5vmin;
+    }
+    a{
+        text-decoration: underline;
+    }
+    p{  
+       
+        font-size: 1.3vmin;
+        margin: 0 auto;
+    }
+    button{
+        background-color: $button-color;
+        color: $button-text;
+        border: none;
+        margin: 1vh auto;
+        width: 100%;
+        padding-block: 2vmin;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: 'Kross Neue Grotesk Heavy';
+        font-size: 1.5vmin;
+    }
+    button:hover{
+        background-color: #F0A8A8;
+    }
+
+    form{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        min-width: 40vmin;
+        max-width: 45vmin;
+    }
+    div form div label{
+        margin-left: 1vmin;
+    }
+    input[type = 'checkbox']{
+        padding: 0;
+        margin: 0;
+        height: 2vmin;
+    }
+    div form input[type = 'password'],  div form input[type = 'email']{
+        padding: 1vmin 1.5vmin;
+        font-size: 1.5vmin;
+        width: 100%;
+        border-radius: 1vmin;
+        border: none;
+        margin:0.5vmin 0 3vmin 0;        
+    }
+
+    div form input[type = 'password']:focus,  div form input[type = 'email']:focus{
+        outline: none;
+        background-color: rgb(163, 163, 163);
+        color: white;
+    }
+    h1{
+        margin: 0 0 10vh 0;
+    }
+}
+
+
+
