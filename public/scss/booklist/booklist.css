@@ -10,6 +10,17 @@ a {
   color: black;
 }
 
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100vw;
+}
+
+section.booklist-container {
+  padding-right: 20vmin;
+}
+
 div.page ul {
   list-style: none;
   display: flex;
@@ -31,4 +42,15 @@ section.booklist-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+div.book {
+  display: flex;
+  flex-direction: column;
+  margin: 2vmin;
+}
+div.book div.book-cover {
+  min-height: 30vmin;
+  min-width: 20vmin;
+  background-color: blue;
 }/*# sourceMappingURL=booklist.css.map */

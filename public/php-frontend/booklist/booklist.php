@@ -12,9 +12,9 @@
     <header></header>
     <main>
         <!-- side-panel for filters -->
-        <section class="side-panel">
-
-        </section>
+        <aside class="side-panel">
+            side
+        </aside>
         <!-- main section -->
         <section class="booklist-container">
             <!-- pagination top -->
@@ -22,7 +22,8 @@
                 <ul>
                     <?php
 
-                    for ($i = 0; $i < 5; $i++) {  //change this to while loop for database data extraction ?>
+                    for ($i = 1; $i < 5; $i++) {  //change this to while loop for database data extraction 
+                    ?>
 
                         <li> <?php echo $i ?>
                             <!-- add function for next page  -->
@@ -39,11 +40,14 @@
 
 
             <div class="booklist">
-                <?php for ($i = 0; $i < 20; $i++) {  //change this to while loop for database data extraction
+                <?php for ($i = 0; $i < 10; $i++) {  //change this to while loop for database data extraction
                 ?>
-                    <div class="book" id="book-<?php echo $i // replace with book id?>">
-                        <?php echo $i; ?>
-                        <!-- add view book function -->
+                    <div class="book" id="book-<?php echo $i // replace with book id
+                                                ?>">
+                        <div class="book-cover"></div>
+                        <div class="book-title">pogi aq</div>
+                        <div class="book-author"> stefanie</div>
+
                     </div>
                 <?php } ?>
             </div>
@@ -56,7 +60,7 @@
                 <ul>
                     <?php
 
-                    for ($i = 0; $i < 5; $i++) {  //change this to while loop for database data extraction 
+                    for ($i = 1; $i < 5; $i++) {  //change this to while loop for database data extraction 
                     ?>
 
                         <li> <?php echo $i ?>
