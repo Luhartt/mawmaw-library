@@ -1,0 +1,27 @@
+@import "../../../assets/scss/reset.scss";
+@import "../../../resources/fonts/stylesheet.css";
+
+div.page {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  li{
+    margin-inline: 0.25vmin;
+    padding: 0.5vmin;
+    border: 1px solid black;
+  }
+}
+
+div.booklist{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) ;
+}
+
+section.booklist-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
