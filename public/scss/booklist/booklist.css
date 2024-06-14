@@ -10,6 +10,10 @@ a {
   color: black;
 }
 
+body {
+  background-color: #101010;
+}
+
 main {
   display: flex;
   flex-direction: row;
@@ -17,8 +21,37 @@ main {
   max-width: 100vw;
 }
 
+aside.side-panel {
+  background-color: #383838;
+  padding-inline: 2rem;
+  color: white;
+}
+aside.side-panel h1 {
+  font-family: "Kross Neue Grotesk";
+  font-size: 2rem;
+  margin-block: 1rem;
+}
+aside.side-panel h2 {
+  font-family: "Kross Neue Grotesk";
+  font-size: 1.5rem;
+  margin-block: 1rem;
+}
+aside.side-panel label {
+  display: block;
+  font-family: "Kross Neue Grotesk Book";
+  font-size: 1rem;
+  margin-block: 0.5rem;
+}
+aside.side-panel select {
+  margin-block: 0.5rem;
+}
+
 section.booklist-container {
-  padding-right: 20vmin;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 div.page ul {
@@ -35,22 +68,27 @@ div.page li {
 div.booklist {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-}
-
-section.booklist-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
 }
 
 div.book {
   display: flex;
   flex-direction: column;
-  margin: 2vmin;
 }
 div.book div.book-cover {
-  min-height: 30vmin;
-  min-width: 20vmin;
+  width: 60%;
+  min-height: 25vmin;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: blue;
+}
+
+div.book::before {
+  content: "";
+  padding-block: 5%;
+}
+
+div.book::after {
+  content: "";
+  padding-block: 5%;
 }/*# sourceMappingURL=booklist.css.map */

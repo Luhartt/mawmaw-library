@@ -1,10 +1,10 @@
-$primary-color: #1C1C1C;
-$secondary-color: #000000;
+$primary-color: #101010;
+$secondary-color: #383838;
 $button-text: #000000;
 $button-color: #E1B0C2;
 $input-color: #FFFFFF;
 $text-color: #FFFFFF;
-$button-hover: #F0A8A8;
+$header: #000000;
 
 @mixin transparent-color($opacity, $color){
     opacity: $opacity;
