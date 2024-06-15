@@ -1,7 +1,6 @@
 @import "../../../assets/scss/reset.scss";
 @import "../../../resources/fonts/stylesheet.css";
 
-
 body {
   background-color: $primary-color;
 }
@@ -38,7 +37,6 @@ aside.side-panel {
     margin-block: 1rem;
   }
 
-
   label {
     display: block;
     font-family: "Kross Neue Grotesk Book";
@@ -55,15 +53,16 @@ aside.side-panel {
     color: white;
     border: 1px solid white;
     padding: 0.5vmin;
+    cursor: pointer;
   }
-  option{
+  option {
     font-family: "Kross Neue Grotesk";
     font-weight: 400;
     background-color: $secondary-color;
-    color: white
+    color: white;
   }
 
-  input[type='text']{
+  input[type="text"] {
     font-family: "Kross Neue Grotesk";
     font-weight: 400;
     font-size: 1.5vmin;
@@ -74,10 +73,27 @@ aside.side-panel {
     padding: 0.5vmin;
   }
 
+  input[type="radio"] {
+    cursor: pointer;
+  }
+
+  button {
+    width: 100%;
+    height: 5vmin;
+    background-color: transparent;
+    color: white;
+    font-family: "Kross Neue Grotesk";
+    font-weight: 400;
+    font-size: 1.5vmin;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $primary-color;
+  }
 }
 
 section.booklist-container {
-  margin-top: 5vh;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -91,6 +107,8 @@ div.page {
     list-style: none;
     display: flex;
     flex-direction: row;
+    margin-block: 2.5vh;
+
   }
   li {
     margin-inline: 0.25vmin;
@@ -99,6 +117,12 @@ div.page {
     color: white;
     font-family: "Kross Neue Grotesk";
     font-weight: 600;
+    font-size: 1.5vmin;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background-color: $secondary-color;
   }
 }
 
@@ -109,54 +133,58 @@ div.booklist {
   width: 80%;
 }
 
+@media screen and (max-width: 600px) {
+  div.booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 //individual books
 div.book {
   display: flex;
   flex-direction: column;
   width: 80%;
 
-  div.book-cover{
+  div.book-cover {
     position: relative;
     min-height: 25vmin;
     z-index: 999;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
 
-  @mixin book-hovers{
+  @mixin book-hovers {
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%,-50%); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    display: flex; 
+    display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     background-color: rgba($color: #000000, $alpha: 0.5);
     color: white;
     font-family: "Kross Neue Grotesk";
     font-weight: 600;
     font-size: 2vmin;
   }
-  
-   div.available:hover::after {
+
+  div.available:hover::after {
     @include book-hovers;
     content: "Available";
-  
   }
 
   div.not-available:hover::after {
     @include book-hovers;
     content: "Not Available";
-
   }
 
-  div.book-title{
+  div.book-title {
     display: -webkit-box;
     max-width: 100%;
     color: white;
@@ -167,18 +195,15 @@ div.book {
     font-family: "Kross Neue Grotesk";
     font-weight: 600;
     font-size: 2vmin;
-
   }
 
-  div.book-author{
+  div.book-author {
     color: white;
     text-align: right;
     font-family: "Kross Neue Grotesk";
     font-weight: 300;
     font-size: 2vmin;
-
   }
-
 }
 
 div.book::before {

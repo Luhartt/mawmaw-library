@@ -18,7 +18,7 @@
             <div class="filters">
                 <!-- form for filters -->
                 <h1>Filters</h1>
-                <form action=#"">
+                <form action=# method = "POST">
 
                     <h2>Search</h2>
                     <select name="search-by" id="search-by">
