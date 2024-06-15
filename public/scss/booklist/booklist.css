@@ -25,7 +25,7 @@ main {
 aside.side-panel {
   background-color: #383838;
   padding-inline: 2rem;
-  color: white;
+  color: #FFFFFF;
 }
 aside.side-panel div.filters {
   position: sticky;
@@ -56,7 +56,7 @@ aside.side-panel select {
   font-weight: 400;
   min-width: 100%;
   background-color: transparent;
-  color: white;
+  color: #FFFFFF;
   border: 1px solid white;
   padding: 0.5vmin;
   cursor: pointer;
@@ -65,7 +65,7 @@ aside.side-panel option {
   font-family: "Kross Neue Grotesk";
   font-weight: 400;
   background-color: #383838;
-  color: white;
+  color: #FFFFFF;
 }
 aside.side-panel input[type=text] {
   font-family: "Kross Neue Grotesk";
@@ -73,7 +73,7 @@ aside.side-panel input[type=text] {
   font-size: 1.5vmin;
   min-width: 100%;
   background-color: transparent;
-  color: white;
+  color: #FFFFFF;
   border: 1px solid white;
   padding: 0.5vmin;
 }
@@ -84,7 +84,7 @@ aside.side-panel button {
   width: 100%;
   height: 5vmin;
   background-color: transparent;
-  color: white;
+  color: #FFFFFF;
   font-family: "Kross Neue Grotesk";
   font-weight: 400;
   font-size: 1.5vmin;
@@ -112,7 +112,7 @@ div.page li {
   margin-inline: 0.25vmin;
   padding: 0.5vmin;
   border: 1px solid white;
-  color: white;
+  color: #FFFFFF;
   font-family: "Kross Neue Grotesk";
   font-weight: 600;
   font-size: 1.5vmin;
@@ -160,7 +160,7 @@ div.book div.available:hover::after {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #FFFFFF;
   font-family: "Kross Neue Grotesk";
   font-weight: 600;
   font-size: 2vmin;
@@ -177,7 +177,7 @@ div.book div.not-available:hover::after {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #FFFFFF;
   font-family: "Kross Neue Grotesk";
   font-weight: 600;
   font-size: 2vmin;
@@ -185,18 +185,18 @@ div.book div.not-available:hover::after {
 }
 div.book div.book-title {
   display: -webkit-box;
-  max-width: 100%;
-  color: white;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+  max-width: 100%;
+  color: #FFFFFF;
   font-family: "Kross Neue Grotesk";
   font-weight: 600;
   font-size: 2vmin;
 }
 div.book div.book-author {
-  color: white;
+  color: #FFFFFF;
   text-align: right;
   font-family: "Kross Neue Grotesk";
   font-weight: 300;

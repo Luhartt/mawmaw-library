@@ -110,7 +110,7 @@
                         <!-- book cover -->
                         <div class="book-title">this is text with two lines</div>
                         <!-- title -->
-                        <div class="book-author"> stefanie</div>
+                        <div class="book-author">Stefanie</div>
                         <!-- author -->
 
                     </div>

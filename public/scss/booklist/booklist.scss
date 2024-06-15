@@ -16,7 +16,7 @@ main {
 aside.side-panel {
   background-color: $secondary-color;
   padding-inline: 2rem;
-  color: white;
+  color: $text-color;
 
   div.filters {
     position: sticky;
@@ -50,7 +50,7 @@ aside.side-panel {
     font-weight: 400;
     min-width: 100%;
     background-color: transparent;
-    color: white;
+    color: $text-color;
     border: 1px solid white;
     padding: 0.5vmin;
     cursor: pointer;
@@ -59,7 +59,7 @@ aside.side-panel {
     font-family: "Kross Neue Grotesk";
     font-weight: 400;
     background-color: $secondary-color;
-    color: white;
+    color: $text-color;
   }
 
   input[type="text"] {
@@ -68,7 +68,7 @@ aside.side-panel {
     font-size: 1.5vmin;
     min-width: 100%;
     background-color: transparent;
-    color: white;
+    color: $text-color;
     border: 1px solid white;
     padding: 0.5vmin;
   }
@@ -81,7 +81,7 @@ aside.side-panel {
     width: 100%;
     height: 5vmin;
     background-color: transparent;
-    color: white;
+    color: $text-color;
     font-family: "Kross Neue Grotesk";
     font-weight: 400;
     font-size: 1.5vmin;
@@ -114,7 +114,7 @@ div.page {
     margin-inline: 0.25vmin;
     padding: 0.5vmin;
     border: 1px solid white;
-    color: white;
+    color: $text-color;
     font-family: "Kross Neue Grotesk";
     font-weight: 600;
     font-size: 1.5vmin;
@@ -168,7 +168,7 @@ div.book {
     align-items: center;
     justify-content: center;
     background-color: rgba($color: #000000, $alpha: 0.5);
-    color: white;
+    color: $text-color;
     font-family: "Kross Neue Grotesk";
     font-weight: 600;
     font-size: 2vmin;
@@ -186,19 +186,19 @@ div.book {
 
   div.book-title {
     display: -webkit-box;
-    max-width: 100%;
-    color: white;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow: hidden;
+    max-width: 100%;
+    color: $text-color;
     font-family: "Kross Neue Grotesk";
     font-weight: 600;
     font-size: 2vmin;
   }
 
   div.book-author {
-    color: white;
+    color: $text-color;
     text-align: right;
     font-family: "Kross Neue Grotesk";
     font-weight: 300;
