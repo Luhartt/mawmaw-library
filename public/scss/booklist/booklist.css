@@ -59,6 +59,7 @@ aside.side-panel select {
   color: white;
   border: 1px solid white;
   padding: 0.5vmin;
+  cursor: pointer;
 }
 aside.side-panel option {
   font-family: "Kross Neue Grotesk";
@@ -76,9 +77,24 @@ aside.side-panel input[type=text] {
   border: 1px solid white;
   padding: 0.5vmin;
 }
+aside.side-panel input[type=radio] {
+  cursor: pointer;
+}
+aside.side-panel button {
+  width: 100%;
+  height: 5vmin;
+  background-color: transparent;
+  color: white;
+  font-family: "Kross Neue Grotesk";
+  font-weight: 400;
+  font-size: 1.5vmin;
+  cursor: pointer;
+}
+aside.side-panel button:hover {
+  background-color: #101010;
+}
 
 section.booklist-container {
-  margin-top: 5vh;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -90,6 +106,7 @@ div.page ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+  margin-block: 2.5vh;
 }
 div.page li {
   margin-inline: 0.25vmin;
@@ -98,6 +115,11 @@ div.page li {
   color: white;
   font-family: "Kross Neue Grotesk";
   font-weight: 600;
+  font-size: 1.5vmin;
+  cursor: pointer;
+}
+div.page li:hover {
+  background-color: #383838;
 }
 
 div.booklist {
@@ -106,6 +128,11 @@ div.booklist {
   width: 80%;
 }
 
+@media screen and (max-width: 600px) {
+  div.booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 div.book {
   display: flex;
   flex-direction: column;
