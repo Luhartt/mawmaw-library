@@ -13,10 +13,11 @@
     <main>
         <!-- side-panel for filters -->
         <aside class="side-panel">
-            <h1>Filters</h1>
+          
 
             <div class="filters">
                 <!-- form for filters -->
+                <h1>Filters</h1>
                 <form action=#"">
 
                     <h2>Search</h2>
@@ -28,9 +29,9 @@
                     <input type="text" name="search" id="search">
 
                     <h2>Status</h2>
-                    <label for="available"> <input type="radio" name="availability" id="available">Available</label>
-                    <label for="not-available"> <input type="radio" name="availability" id="not-available">Not Available</label>
-                    <label for="available-library"> <input type="radio" name="availability" id=available-library">Available in Library</label>
+                    <label for="available"> <input type="radio" name="availability" id="available" value = "available" ><span class="custom-radio"></span>&nbsp;Available</label>
+                    <label for="not-available"> <input type="radio" name="availability" id="not-available" value = "not-available" ><span class="custom-radio"></span>&nbsp;Not Available</label>
+                    <label for="available-library"> <input type="radio" name="availability" id=available-library" value = "available-library" ><span class="custom-radio"></span>&nbsp;Available in Library</label>
 
                     <h2>Publishing Year</h2>
                     <select name="publish-year" id="publish-year">
@@ -49,9 +50,9 @@
                     </select>
 
                     <h2>Book Type</h2>
-                    <label for="academic"> <input type="radio" name="book-type" id="academic">Academic</label>
-                    <label for="fictional"> <input type="radio" name="book-type" id="fictional">Fictional</label>
-                    <label for="non-fictional"> <input type="radio" name="book-type" id="non-fictional">Non Fictional</label>
+                    <label for="academic"> <input type="radio" name="book-type" id="academic" value = "academic"><span class="custom-radio"></span>&nbsp;Academic</label>
+                    <label for="fictional"> <input type="radio" name="book-type" id="fictional" value = "fictional"><span class="custom-radio"></span>&nbsp;Fictional</label>
+                    <label for="non-fictional"> <input type="radio" name="book-type" id="non-fictional" value = "non-fictional"><span class="custom-radio"></span>&nbsp;Non Fictional</label>
 
                     <h2>Genre</h2>
                     <select name="genre" id="genre">
@@ -101,13 +102,16 @@
 
 
             <div class="booklist">
-                <?php for ($i = 0; $i < 10; $i++) {  //change this to while loop for database data extraction
+                <?php for ($i = 0; $i < 20; $i++) {  //change this to while loop for database data extraction
+                $status = "available" //add code for book status here
                 ?>
-                    <div class="book" id="book-<?php echo $i // replace with book id
-                                                ?>">
-                        <div class="book-cover"></div>
-                        <div class="book-title">pogi aq</div>
+                    <div class="book">
+                        <div class="book-cover <?php echo $status?>" id="book-<?php echo $i // replace with book id ?>"> <img src="../../../resources/images/book-covers/maki.JPG" alt=""> </div> 
+                        <!-- book cover -->
+                        <div class="book-title">this is text with two lines</div>
+                        <!-- title -->
                         <div class="book-author"> stefanie</div>
+                        <!-- author -->
 
                     </div>
                 <?php } ?>
