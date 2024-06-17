@@ -17,7 +17,7 @@ body {
 main {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 60vh 1fr;
 }
 main img {
   grid-column: 1/2;
@@ -45,9 +45,10 @@ main section div {
   flex-direction: row;
 }
 main section div form {
-  min-width: 40vmin;
+  min-width: 100%;
   flex-direction: column;
   display: flex;
+  overflow: auto;
 }
 main section div form h1,
 main section div form p {

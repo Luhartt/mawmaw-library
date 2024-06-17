@@ -14,7 +14,7 @@ body {
 main {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 60vh 1fr;
 
   img {
     grid-column: 1/2;
@@ -41,9 +41,11 @@ main {
       flex-direction: row;
 
       form {
-        min-width: 40vmin;
+        min-width: 100%;
+        // max-width: 40vmin;
         flex-direction: column;
         display: flex;
+        overflow: auto;
 
         h1,
         p {
