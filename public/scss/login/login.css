@@ -17,7 +17,7 @@ body {
 main {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 60vh 1fr;
+  grid-template-columns: 50vw 50vw;
 }
 main img {
   grid-column: 1/2;
@@ -39,24 +39,27 @@ main section {
   align-items: center;
   justify-content: center;
 }
-main section div {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-main section div form {
-  min-width: 100%;
-  flex-direction: column;
-  display: flex;
-  overflow: auto;
-}
-main section div form h1,
-main section div form p {
+main h1,
+main h2 {
   font-family: "Kross Neue Grotesk";
-  color: white;
+  color: #ffffff;
   text-align: center;
+  font-size: 4vmin;
 }
-main section div form span.material-symbols-outlined {
+main h2 {
+  font-size: 1.5vmin;
+}
+main p,
+main a {
+  font-family: "Kross Neue Grotesk";
+  color: #868397;
+  text-align: center;
+  font-size: 1.5vmin;
+}
+main a {
+  text-decoration: underline;
+}
+main span.material-symbols-outlined {
   font-size: 2.5vmin;
   padding-left: 1vmin;
   width: -moz-fit-content;
@@ -66,7 +69,7 @@ main section div form span.material-symbols-outlined {
   right: 0;
   color: rgba(255, 255, 255, 0.3);
 }
-main section div form input {
+main input {
   background-color: #3b3851;
   color: #ffffff;
   border: 1px solid transparent;
@@ -77,14 +80,14 @@ main section div form input {
   padding: 1.5vmin 1.5vmin 1.5vmin 3.5vmin;
   border-radius: 0.5vmin;
 }
-main section div form input:focus {
+main input:focus {
   border-color: 1px solid #2b2b44;
 }
-main section div form input::-moz-placeholder {
+main input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.3);
   font-family: "Kross Neue Grotesk";
 }
-main section div form input::placeholder {
+main input::placeholder {
   color: rgba(255, 255, 255, 0.3);
   font-family: "Kross Neue Grotesk";
 }
@@ -99,4 +102,46 @@ div.otp input {
   font-size: 2vmin;
   text-align: center;
   border-radius: 1vmin;
+}
+
+section.containers {
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+section.containers div.login-container {
+  display: flex;
+  flex-direction: row;
+}
+section.containers div.login-container div.login-subcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+section.containers div.login-container div.login-subcontainer label {
+  display: flex;
+}
+section.containers div.login-container div.login-subcontainer label input[type=checkbox] {
+  width: 5vmin;
+  border: transparent;
+}
+section.containers div.register-container {
+  display: flex;
+  flex-direction: row;
+}
+section.containers div.forgot-password-container {
+  display: flex;
+  flex-direction: row;
+}
+
+div.form-container {
+  min-width: 50vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.form-container form {
+  min-width: 50%;
+  max-width: 100%;
 }/*# sourceMappingURL=login.css.map */
