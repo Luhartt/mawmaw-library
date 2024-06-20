@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../scss/login/login.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- <script defer type="module" src = "../../../includes/jquery.js"> </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
 </head>
@@ -14,7 +16,7 @@
 <body>
     <main>
         <img src="../../../resources/images/backgrounds/login-register.png" alt="">
-        <section class="containers">
+        <section class="containers" id="containers">
 
             <!-- id lang may prefix na register/login para unique pagtinawag sa js, sa php namamn button ung irerefernce para alam ng script ano irurun -->
 
@@ -39,7 +41,8 @@
                             lock_open
                         </span>
                         <button type="button" name="register" id="register">Register</button>
-                        <p>already a member? <a href="#login-container">Click Here</a></p>
+                        <p>already a member? <a class="to-login">Click Here</a></p>
+                        <!-- href="#login-container"  -->
                     </form>
                 </div>
 
@@ -71,16 +74,18 @@
                         <span class="material-symbols-outlined">
                             alternate_email
                         </span>
-                        <input type="password" name="password" id="login-password" placeholder = "Password">
+                        <input type="password" name="password" id="login-password" placeholder="Password">
                         <span class="material-symbols-outlined">
                             lock_open
                         </span>
-                        <div class = "login-subcontainer">
+                        <div class="login-subcontainer">
                             <label><input type="checkbox" name="remember" id="remember">&nbsp; Remember Me</label>
-                            <a href="#forgot-password-container">Forgot Password?</a>
+                            <a class="to-forgot">Forgot Password?</a>
+                            <!-- href="#forgot-password-container" -->
                         </div>
                         <button type="button" name="login" id="login">Login</button>
-                        <p>Don't have an account? <a href="#register-container">Click Here</a></p>
+                        <p>Don't have an account? <a class = "to-register">Click Here</a></p>
+                        <!-- href="#register-container" -->
                     </form>
                 </div>
 
@@ -98,7 +103,7 @@
                             alternate_email
                         </span>
                         <button type="button">Find my email</button>
-                        <p>Don't have an account? <a href="#register-container">Click Here</a></p>
+                        <p>Don't have an account? <a class = "to-register">Click Here</a></p>
                     </form>
                 </div>
                 <div class="form-container">
@@ -113,7 +118,7 @@
                         </div>
                         <button type="button" class="resend-otp"><u>Resend OTP</u></button>
                         <button type="button">Verify</button>
-                        <p>Don't have an account? <a href="#register-container">Click Here</a></p>
+                        <p>Don't have an account? <a class = "to-register">Click Here</a></p>
                     </form>
                 </div>
 
@@ -132,7 +137,8 @@
                             lock_open
                         </span>
                         <button type="button">Change Password</button>
-                        <p>Don't have an account? <a href="#register-container">Click Here</a></p>
+                        <p>Don't have an account? <a class = "to-register">Click Here</a></p>
+                        <!-- href="#register-container" -->
                     </form>
                 </div>
             </div>
@@ -141,6 +147,31 @@
 
         </section>
     </main>
+<script>
+
+$(".to-register").on("click", function(event){
+    event.preventDefault();
+    $("#containers").animate({
+        scrollTop: $("#register-container").offset().top
+    },1500)
+})
+
+$(".to-login").on("click", function(event){
+    event.preventDefault();
+    $("#containers").animate({
+        scrollTop: $("#login-container").offset().top
+    },1500)
+})
+
+$(".to-forgot").on("click", function(event){
+    event.preventDefault();
+    $("#containers").animate({
+        scrollTop: $("#forgot-password-container").offset().top
+    },1500)
+})
+
+
+</script>
 </body>
 
 </html>
