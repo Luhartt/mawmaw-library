@@ -65,7 +65,7 @@ main span.material-symbols-outlined {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  top: -10%;
+  top: -11%;
   right: 0;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -109,6 +109,7 @@ section.containers {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  scroll-behavior: smooth;
 }
 section.containers div.login-container {
   display: flex;
@@ -127,17 +128,18 @@ section.containers div.login-container div.login-subcontainer label input[type=c
 }
 section.containers div.register-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 section.containers div.forgot-password-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 div.form-container {
   min-width: 50vw;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

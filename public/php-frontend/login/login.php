@@ -22,10 +22,11 @@
 
             <div class="register-container" id="register-container">
 
-                <div class="form-container">
+                <div class="form-container" id="register-form">
+                    <h1>MAWMAW LIBRARY</h1>
+                    <h2>Create an account</h2>
                     <form action="#" method="POST">
-                        <h1>MAWMAW LIBRARY</h1>
-                        <h2>Create an account</h2>
+
                         <input type="text" name="username" id="register-username" placeholder="Username">
                         <span class="material-symbols-outlined">person</span>
                         <input type="text" name="name" id="register-name" placeholder="Name">
@@ -40,17 +41,18 @@
                         <span class="material-symbols-outlined">
                             lock_open
                         </span>
-                        <button type="button" name="register" id="register">Register</button>
-                        <p>already a member? <a class="to-login">Click Here</a></p>
+                        <button type="button" name="register" id="register"><a href="#register-otp">Register</a></button>
+                        <p>already a member? <a href="#login-container">Click Here</a></p>
                         <!-- href="#login-container"  -->
                     </form>
                 </div>
 
 
-                <div class="form-container">
+                <div class="form-container" id="register-otp">
+                    <h1>MAWMAW LIBRARY</h1>
+                    <h2>the 4-figit code has been sent to your email</h2>
                     <form action="" class="verify-otp">
-                        <h1>MAWMAW LIBRARY</h1>
-                        <h2>the 4-figit code has been sent to your email</h2>
+
                         <div class="otp">
                             <input type="text" name="otp1" id="register-otp1" maxlength="1" pattern="[0-9]{1}">
                             <input type="text" name="otp2" id="register-otp2" maxlength="1" pattern="[0-9]{1}">
@@ -67,9 +69,10 @@
             <div class="login-container" id="login-container">
 
                 <div class="form-container">
+                    <h1>MAWMAW LIBRARY</h1>
+                    <h2>Please enter your email and password</h2>
                     <form action="">
-                        <h1>MAWMAW LIBRARY</h1>
-                        <h2>Please enter your email and password</h2>
+
                         <input type="email" name="email" id="login-email" placeholder="Email">
                         <span class="material-symbols-outlined">
                             alternate_email
@@ -80,11 +83,11 @@
                         </span>
                         <div class="login-subcontainer">
                             <label><input type="checkbox" name="remember" id="remember">&nbsp; Remember Me</label>
-                            <a class="to-forgot">Forgot Password?</a>
+                            <a href="#forgot-password-container" class="to-forgot">Forgot Password?</a>
                             <!-- href="#forgot-password-container" -->
                         </div>
                         <button type="button" name="login" id="login">Login</button>
-                        <p>Don't have an account? <a class = "to-register">Click Here</a></p>
+                        <p>Don't have an account? <a href="#register-container">Click Here</a></p>
                         <!-- href="#register-container" -->
                     </form>
                 </div>
@@ -95,21 +98,23 @@
 
 
                 <div class="form-container">
-                    <form action="#" class="forgot-email">
-                        <h1>MAWMAW LIBRARY</h1>
-                        <h2>Please enter your email</h2>
+                    <h1>MAWMAW LIBRARY</h1>
+                    <h2>Please enter your email</h2>
+                    <form action="#" class="forgot-password-email">
+
                         <input type="email" name="email" id="forgot-email" placeholder="Email">
                         <span class="material-symbols-outlined">
                             alternate_email
                         </span>
-                        <button type="button">Find my email</button>
-                        <p>Don't have an account? <a class = "to-register">Click Here</a></p>
+                        <button type="button"><a href="#forgot-otp">Find my email </a></button>
+                        <p>Don't have an account? <a href="#register-form">Click Here</a></p>
                     </form>
                 </div>
-                <div class="form-container">
+                <div class="form-container" id="forgot-otp">
+                    <h1>MAWMAW LIBRARY</h1>
+                    <h2>the 4-figit code has been sent to your email</h2>
                     <form action="" class="verify-otp">
-                        <h1>MAWMAW LIBRARY</h1>
-                        <h2>the 4-figit code has been sent to your email</h2>
+
                         <div class="otp">
                             <input type="text" name="otp1" id="forgot-otp1" maxlength="1" pattern="[0-9]{1}">
                             <input type="text" name="otp2" id="forgot-otp2" maxlength="1" pattern="[0-9]{1}">
@@ -117,17 +122,17 @@
                             <input type="text" name="otp4" id="forgot-otp4" maxlength="1" pattern="[0-9]{1}">
                         </div>
                         <button type="button" class="resend-otp"><u>Resend OTP</u></button>
-                        <button type="button">Verify</button>
-                        <p>Don't have an account? <a class = "to-register">Click Here</a></p>
+                        <button type="button"><a href="#forgot-change-password">Verify</a></button>
                     </form>
                 </div>
 
 
 
-                <div class="form-container">
+                <div class="form-container" id="forgot-change-password">
+                    <h1>MAWMAW LIBRARY</h1>
+                    <h2>Please enter your new password</h2>
                     <form action="" class="change-password">
-                        <h1>MAWMAW LIBRARY</h1>
-                        <h2>Please enter your new password</h2>
+
                         <input type="password" name="password" id="forgot-password">
                         <span class="material-symbols-outlined">
                             lock_open
@@ -137,7 +142,6 @@
                             lock_open
                         </span>
                         <button type="button">Change Password</button>
-                        <p>Don't have an account? <a class = "to-register">Click Here</a></p>
                         <!-- href="#register-container" -->
                     </form>
                 </div>
@@ -147,31 +151,33 @@
 
         </section>
     </main>
-<script>
+    <script>
+        // $(document).ready(function() {
 
-$(".to-register").on("click", function(event){
-    event.preventDefault();
-    $("#containers").animate({
-        scrollTop: $("#register-container").offset().top
-    },1500)
-})
+        //     $(".to-register").on("click", function(event) {
+        //         event.preventDefault();
+        //         $("#containers").animate({
+        //             scrollTop: $("#register-container").offset().top
+        //         }, 1500)
+        //     })
 
-$(".to-login").on("click", function(event){
-    event.preventDefault();
-    $("#containers").animate({
-        scrollTop: $("#login-container").offset().top
-    },1500)
-})
+        //     $(".to-login").on("click", function(event) {
+        //         event.preventDefault();
+        //         $("#containers").animate({
+        //             scrollTop: $("#login-container").offset().top
+        //         }, 1500)
+        //     })
+        // })
 
-$(".to-forgot").on("click", function(event){
-    event.preventDefault();
-    $("#containers").animate({
-        scrollTop: $("#forgot-password-container").offset().top
-    },1500)
-})
+        $('a').click(function() {
+            $('#containers').stop()
+            $('#containers').css('opacity', '0')
+            $('#containers').animate({
+                opacity: 1
+            }, 1500)
 
-
-</script>
+        })
+    </script>
 </body>
 
 </html>
