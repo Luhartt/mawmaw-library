@@ -128,16 +128,16 @@
 
 
 
-                <div class="form-container" id="forgot-change-password">
+                <div class="form-container forgot-change-password" id="forgot-change-password">
                     <h1>MAWMAW LIBRARY</h1>
                     <h2>Please enter your new password</h2>
                     <form action="" class="change-password">
 
-                        <input type="password" name="password" id="forgot-password">
+                        <input type="password" name="password" id="forgot-password" placeholder = "New Password">
                         <span class="material-symbols-outlined">
                             lock_open
                         </span>
-                        <input type="password" name="confirm-password" id="forgot-confirm-password">
+                        <input type="password" name="confirm-password" id="forgot-confirm-password"  placeholder = "Confirm Password">
                         <span class="material-symbols-outlined">
                             lock_open
                         </span>

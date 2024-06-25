@@ -61,15 +61,6 @@ main {
     text-decoration: underline;
   }
 
-  span.material-symbols-outlined {
-    font-size: 2.5vmin;
-    padding-left: 1vmin;
-    width: fit-content;
-    position: relative;
-    top: -11%;
-    right: 0;
-    color: rgba($color: #fff, $alpha: 0.3);
-  }
 
   input {
     background-color: $input-color;
@@ -79,7 +70,7 @@ main {
     margin: 0 auto;
     flex-direction: column;
     width: 100%;
-    padding: 1.5vmin 1.5vmin 1.5vmin 3.5vmin;
+    padding: 1.5vmin 1.5vmin 1.5vmin 4vmin;
     border-radius: 0.5vmin;
   }
 
@@ -96,12 +87,15 @@ main {
 div.otp {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   input {
     width: 7vmin;
     height: 7vmin;
     font-size: 2vmin;
     text-align: center;
     border-radius: 1vmin;
+    padding: 0;
+    margin-inline: 1vmin;
   }
 }
 
@@ -152,5 +146,41 @@ div.form-container {
   form {
     min-width: 50%;
     max-width: 100%;
+  }
+}
+
+
+span.material-symbols-outlined {
+  font-size: 2.5vmin;
+  padding-left: 1vmin;
+  width: fit-content;
+  position: relative;
+  right: 0;
+  color: rgba($color: #fff, $alpha: 0.3);
+}
+
+div.register-container {
+
+  span.material-symbols-outlined{
+   top: -11%
+
+  }
+}
+
+div.login-container{
+  .material-symbols-outlined{
+    top: -17%;
+  }
+}
+
+div.forgot-password-container{
+  .material-symbols-outlined{
+    top: -35%;
+  }
+  div.forgot-change-password{
+    .material-symbols-outlined{
+      top: -24%;
+
+    }
   }
 }
