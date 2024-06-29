@@ -1,0 +1,97 @@
+@import "../../../assets/scss/reset.scss";
+@import "../../../resources/fonts/stylesheet.css";
+
+$button-color-one: #2ecf5b;
+$button-color-one-hover: #239643;
+$button-color-one-disabled: #c92d2d;
+$button-color-two: #ee99eb;
+$button-color-two-hover: #752473;
+$primary-text-color: white;
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  padding: 25vmin;
+  padding-top: 0;
+}
+
+section.book-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+
+  div.book-cover {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+
+    img {
+      aspect-ratio: 10 / 16;
+      $width: 25vmin;
+      width: clamp($width, $width, $width);
+    }
+    button {
+      margin-block: 1vmin;
+      border: transparent;
+      color: black;
+      padding: 2vmin;
+      font-family: "Kross Neue Grotesk Heavy";
+      width: 100%;
+      border-radius: 1vmin;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: $default-font-size;
+
+    }
+    :nth-child(2) {
+      background-color: $button-color-one;
+    }
+
+    :nth-child(2):hover {
+      background-color: $button-color-one-hover;
+    }
+
+    :nth-child(2):disabled {
+      background-color: $button-color-one-disabled;
+    }
+
+    :nth-child(3) {
+      background-color: $button-color-two;
+    }
+
+    :nth-child(3):hover {
+        background-color: $button-color-two-hover;
+      }
+  }
+
+  div.book-details {
+    color: $primary-text-color;
+    width: auto;
+    font-size: $default-font-size;
+
+    span {
+      font-family: "Kross Neue Grotesk Heavy";
+      line-height: 4.5vmin;
+    }
+    p {
+      font-family: "Kross Neue Grotesk Book";
+    }
+  }
+}
+
+section.comments-container{
+    background-color: $secondary-color;
+    padding: 2vmin;
+
+    div.comments-wrapper{
+        background-color: $primary-color;
+    }
+
+    div.comment-content{
+        background-color: black;
+        color: white;
+        margin-block: 1.5vmin;
+    }
+}

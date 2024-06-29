@@ -1,0 +1,91 @@
+@import "../../../resources/fonts/stylesheet.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: #101010;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  padding: 25vmin;
+  padding-top: 0;
+}
+
+section.book-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+section.book-container div.book-cover {
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section.book-container div.book-cover img {
+  aspect-ratio: 10/16;
+  width: 25vmin;
+}
+section.book-container div.book-cover button {
+  margin-block: 1vmin;
+  border: transparent;
+  color: black;
+  padding: 2vmin;
+  font-family: "Kross Neue Grotesk Heavy";
+  width: 100%;
+  border-radius: 1vmin;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.5vmin;
+}
+section.book-container div.book-cover :nth-child(2) {
+  background-color: #2ecf5b;
+}
+section.book-container div.book-cover :nth-child(2):hover {
+  background-color: #239643;
+}
+section.book-container div.book-cover :nth-child(2):disabled {
+  background-color: #c92d2d;
+}
+section.book-container div.book-cover :nth-child(3) {
+  background-color: #ee99eb;
+}
+section.book-container div.book-cover :nth-child(3):hover {
+  background-color: #752473;
+}
+section.book-container div.book-details {
+  color: white;
+  width: auto;
+  font-size: 1.5vmin;
+}
+section.book-container div.book-details span {
+  font-family: "Kross Neue Grotesk Heavy";
+  line-height: 4.5vmin;
+}
+section.book-container div.book-details p {
+  font-family: "Kross Neue Grotesk Book";
+}
+
+section.comments-container {
+  background-color: #383838;
+  padding: 2vmin;
+}
+section.comments-container div.comments-wrapper {
+  background-color: #101010;
+}
+section.comments-container div.comment-content {
+  background-color: black;
+  color: white;
+  margin-block: 1.5vmin;
+}/*# sourceMappingURL=books.css.map */
