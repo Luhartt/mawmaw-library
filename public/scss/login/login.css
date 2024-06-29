@@ -52,7 +52,7 @@ main h2 {
   margin-block: 1.5%;
 }
 main p,
-main a {
+main a, main label {
   font-family: "Kross Neue Grotesk";
   color: #868397;
   text-align: center;

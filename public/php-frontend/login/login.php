@@ -36,7 +36,7 @@
                             lock_open
                         </span>
                         <div class="login-subcontainer">
-                            <label><input type="checkbox" name="remember" id="remember">&nbsp; Remember Me</label>
+                            <label><input type="checkbox" name="remember" id="remember">&nbsp;Remember Me</label>
                             <a href="#forgot-password-container" class="to-forgot">Forgot Password?</a>
                             <!-- href="#forgot-password-container" -->
                         </div>
@@ -87,8 +87,9 @@
                             <input type="text" name="otp3" id="register-otp3" maxlength="1" pattern="[0-9]{1}">
                             <input type="text" name="otp4" id="register-otp4" maxlength="1" pattern="[0-9]{1}">
                         </div>
-                        <button type="button" class="resend-otp"><u>Resend OTP</u></button>
+                        <br>
                         <p>1:00</p>
+                        <button type="button" class="resend-otp"><u>Resend OTP</u></button>
                         <button type="button">Verify</button>
                     </form>
                 </div>
@@ -122,6 +123,7 @@
                             <input type="text" name="otp3" id="forgot-otp3" maxlength="1" pattern="[0-9]{1}">
                             <input type="text" name="otp4" id="forgot-otp4" maxlength="1" pattern="[0-9]{1}">
                         </div>
+                        <br>
                         <p>1:00</p>
                         <button type="button" class="resend-otp"><u>Resend OTP</u></button>
                         <button type="button"><a href="#forgot-change-password">Verify</a></button>
@@ -171,15 +173,17 @@
         //     })
         // })
 
-        $('a').click(function() {
-            $('#containers').stop()
-            $('#containers').css('opacity', '0')
-            $('#containers').animate({
-                opacity: 0
-            }, 350).animate({
-                opacity: 1
-            }, 1000)
+        document.addEventListener("DOMContentLoaded", () => {
+            $('a').click(function() {
+                $('#containers').stop()
+                $('#containers').css('opacity', '0')
+                $('#containers').animate({
+                    opacity: 0
+                }, 350).animate({
+                    opacity: 1
+                }, 1000)
 
+            })
         })
     </script>
 </body>
