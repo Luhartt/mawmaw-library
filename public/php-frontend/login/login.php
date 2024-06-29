@@ -20,6 +20,34 @@
 
             <!-- id lang may prefix na register/login para unique pagtinawag sa js, sa php namamn button ung irerefernce para alam ng script ano irurun -->
 
+            <div class="login-container" id="login-container">
+
+                <div class="form-container">
+                    <h1>MAWMAW LIBRARY</h1>
+                    <h2>Please enter your email and password</h2>
+                    <form action="">
+
+                        <input type="email" name="email" id="login-email" placeholder="Email">
+                        <span class="material-symbols-outlined">
+                            alternate_email
+                        </span>
+                        <input type="password" name="password" id="login-password" placeholder="Password">
+                        <span class="material-symbols-outlined">
+                            lock_open
+                        </span>
+                        <div class="login-subcontainer">
+                            <label><input type="checkbox" name="remember" id="remember">&nbsp; Remember Me</label>
+                            <a href="#forgot-password-container" class="to-forgot">Forgot Password?</a>
+                            <!-- href="#forgot-password-container" -->
+                        </div>
+                        <button type="button" name="login" id="login">Login</button>
+                        <p>Don't have an account? <a href="#register-container">Click Here</a></p>
+                        <!-- href="#register-container" -->
+                    </form>
+                </div>
+
+            </div>
+
             <div class="register-container" id="register-container">
 
                 <div class="form-container" id="register-form">
@@ -60,35 +88,8 @@
                             <input type="text" name="otp4" id="register-otp4" maxlength="1" pattern="[0-9]{1}">
                         </div>
                         <button type="button" class="resend-otp"><u>Resend OTP</u></button>
+                        <p>1:00</p>
                         <button type="button">Verify</button>
-                    </form>
-                </div>
-
-            </div>
-
-            <div class="login-container" id="login-container">
-
-                <div class="form-container">
-                    <h1>MAWMAW LIBRARY</h1>
-                    <h2>Please enter your email and password</h2>
-                    <form action="">
-
-                        <input type="email" name="email" id="login-email" placeholder="Email">
-                        <span class="material-symbols-outlined">
-                            alternate_email
-                        </span>
-                        <input type="password" name="password" id="login-password" placeholder="Password">
-                        <span class="material-symbols-outlined">
-                            lock_open
-                        </span>
-                        <div class="login-subcontainer">
-                            <label><input type="checkbox" name="remember" id="remember">&nbsp; Remember Me</label>
-                            <a href="#forgot-password-container" class="to-forgot">Forgot Password?</a>
-                            <!-- href="#forgot-password-container" -->
-                        </div>
-                        <button type="button" name="login" id="login">Login</button>
-                        <p>Don't have an account? <a href="#register-container">Click Here</a></p>
-                        <!-- href="#register-container" -->
                     </form>
                 </div>
 
@@ -107,7 +108,7 @@
                             alternate_email
                         </span>
                         <button type="button"><a href="#forgot-otp">Find my email </a></button>
-                        <p>Don't have an account? <a href="#register-form">Click Here</a></p>
+                        <p>Don't have an account? <a href="#register-container">Click Here</a></p>
                     </form>
                 </div>
                 <div class="form-container" id="forgot-otp">
@@ -121,6 +122,7 @@
                             <input type="text" name="otp3" id="forgot-otp3" maxlength="1" pattern="[0-9]{1}">
                             <input type="text" name="otp4" id="forgot-otp4" maxlength="1" pattern="[0-9]{1}">
                         </div>
+                        <p>1:00</p>
                         <button type="button" class="resend-otp"><u>Resend OTP</u></button>
                         <button type="button"><a href="#forgot-change-password">Verify</a></button>
                     </form>
@@ -133,11 +135,11 @@
                     <h2>Please enter your new password</h2>
                     <form action="" class="change-password">
 
-                        <input type="password" name="password" id="forgot-password" placeholder = "New Password">
+                        <input type="password" name="password" id="forgot-password" placeholder="New Password">
                         <span class="material-symbols-outlined">
                             lock_open
                         </span>
-                        <input type="password" name="confirm-password" id="forgot-confirm-password"  placeholder = "Confirm Password">
+                        <input type="password" name="confirm-password" id="forgot-confirm-password" placeholder="Confirm Password">
                         <span class="material-symbols-outlined">
                             lock_open
                         </span>
@@ -173,8 +175,10 @@
             $('#containers').stop()
             $('#containers').css('opacity', '0')
             $('#containers').animate({
+                opacity: 0
+            }, 350).animate({
                 opacity: 1
-            }, 1500)
+            }, 1000)
 
         })
     </script>
